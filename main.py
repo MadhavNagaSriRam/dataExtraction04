@@ -104,8 +104,8 @@ def extract_data(image_source: BytesIO, prompt: str) -> dict:
         print(f"Error extracting data: {str(e)}")
         return None
 
-@app.post("/extract-data/")
-async def extract_data(file: UploadFile = File(...)):
+@app.get("/extract-data/{file:path}")
+async def extract_data(file: str):
     """
     Extracts data dynamically from Aadhaar or Marksheet documents (PDFs or images)
     and returns it in JSON format.
