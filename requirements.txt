@@ -3,4 +3,5 @@ uvicorn
 pillow
 pymupdf
 python-dotenv
+python-multipart
 google-generativeai
